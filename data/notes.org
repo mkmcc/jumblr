@@ -1,0 +1,29 @@
+#+STARTUP: showall
+
+* raw data files:
+  1. SIL-words.txt
+     source: http://www-01.sil.org/linguistics/wordlists/english/
+     I don't know the method behind this word list, but it seems
+     pretty complete...
+  2. wlist*.txt
+     source: http://www.keithv.com/software/wlist/
+     These are interesting word lists which represent the
+     intersections of 10 different corpuses.  wlist10.txt lists the
+     words which appear in all 10 corpuses, wlist9.txt lists the
+     words which appear in 9 out of 10, and so on.  
+
+* processing:
+  1. files with -prune appended to the filename have been
+     cross-checked with the New Oxford American Dictionary which
+     comes with mac osx.
+  2. acronym.txt contains a list of 3 letter words which appear in
+     the word lists, but which are either acronyms or abbreviations
+     of other words.
+
+* results
+  1. expert.txt is SIL-prune.txt with acronyms removed.
+  2. hard.txt is the intersection of SIL-prune.txt and wlist8.txt,
+     with the words in acronym.txt removed.
+  3. medium.txt is the intersection of hard.txt and wlist9.txt
+  4. easy.txt is the intersection of hard.the and wlist10.txt
+    
