@@ -11,11 +11,15 @@
   reshuffles the letters.
 
   I tried to make the interface pretty responsive; take a look at the
-  screenshots below for a sense of how it works.
+  screenshots below for a sense of how it works
 
   [[./screenshots/jumblr-normal.png]]
 
+  Typing:
+
   [[./screenshots/jumblr-typing.png]]
+
+  If you give up and ask for the solution:
 
   [[./screenshots/jumblr-solve.png]]
 
@@ -79,3 +83,9 @@
   #+BEGIN_SRC emacs-lisp
   (setq jumblr-dict-file "dict/easy.txt")
   #+END_SRC
+
+* Acknowledgements
+
+  Thanks to Meredith, Brittney, Kathara, and Anna for suggesting the
+  name jumblr!
+
