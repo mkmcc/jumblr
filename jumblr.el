@@ -450,6 +450,15 @@ current guess."
 (defvar jlr-game-data nil
   "Data for the jumblr game.")
 
+;; TODO: rather than computing all permutations, then checking whether
+;;       they exist in the dictionary, simply run through the
+;;       dictionary and keep words which can be made out of this
+;;       word.  That should be MUCH faster, especially for long
+;;       words.  Also, I can take out all the permutation, subset,
+;;       etc. code.
+;;
+;;       In fact, that might be fast enough that I won't need
+;;       precomputed game files!
 (defun jlr-create-game-data (word)
   "Populate `jlr-game-data'.  See comments in source above its definition."
   (let* ((words (--sort (< (length it) (length other))
