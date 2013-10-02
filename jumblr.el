@@ -158,7 +158,7 @@ dict/expert.txt (85k words)")
 ;;; set-theory stuff:
 ;; difference lists
 (defun jlr-difference (list1 list2)
-  "like -difference, but works with repeated entries."
+  "Like -difference, but works with repeated entries."
   (let ((newlist list1))
     (loop for item in list2
           do (setq newlist
@@ -167,7 +167,7 @@ dict/expert.txt (85k words)")
 
 ;; scramble a word
 (defun jlr-scramble-word (word)
-  "return a random permutation of the letters in WORD."
+  "Return a random permutation of the letters in WORD."
   (let* ((lst (string-to-list word))
          (num (length lst))
          (rnd (--map (list (random (* 10 num)) it) lst)))
@@ -240,12 +240,8 @@ presume the file is properly formatted (lower case, etc.)"
           (setq word-list (cons (match-string 0) word-list)))))
     word-list))
 
-(defvar word-list)
-(setq word-list
-      (--sort (s-less? it other)
-              (jlr-slurp-dictionary jumblr-dict-file)))
-
-
+(defvar jlr-word-list)
+(setq jlr-word-list (jlr-slurp-dictionary jumblr-dict-file))
 
 ;;; read and write a list of precomputed games
 ;;
@@ -438,15 +434,6 @@ current guess."
 
 
 ;;; data structure for the game
-;; The structure is
-;;       ((scramble guess) ((subword1 nil) (subword2 nil)...))
-;; where scramble is a random permutation of the word, guess is the
-;; user's current guess, and the following list contains all of the
-;; subwords which must be guessed.  The second element may either be
-;; nil (meaning the word hasn't been guessed), t (meaning the word has
-;; been guessed), or -1 (meaning the user has given up and used
-;; jlr-solve-game to show the answer.
-;;
 (defvar jlr-game-data nil
   "Data for the jumblr game.")
 
@@ -460,7 +447,15 @@ current guess."
 ;;       In fact, that might be fast enough that I won't need
 ;;       precomputed game files!
 (defun jlr-create-game-data (word)
-  "Populate `jlr-game-data'.  See comments in source above its definition."
+  "Populate `jlr-game-data'.
+The structure is
+      ((scramble guess) ((subword1 nil) (subword2 nil)...))
+where scramble is a random permutation of the word, guess is the
+user's current guess, and the following list contains all of the
+subwords which must be guessed.  The second element may either be
+nil (meaning the word hasn't been guessed), t (meaning the word has
+been guessed), or -1 (meaning the user has given up and used
+jlr-solve-game to show the answer."
   (let* ((words (--sort (< (length it) (length other))
                         (jlr-get-subwords word)))
          (data (--map (list it nil) words))
