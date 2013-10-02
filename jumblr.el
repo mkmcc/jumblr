@@ -261,7 +261,6 @@ current guess."
 
 ;; key bindings
 (defvar jumblr-mode-map
-  "Keymap for jumblr mode."
   (let ((map (make-keymap)))
     (suppress-keymap map)
 
@@ -299,7 +298,8 @@ current guess."
     (define-key map (kbd "z") 'jlr-insert-z)
 
     (define-key map (kbd "DEL") 'jlr-backspace)
-    map))
+    map)
+  "Keymap for jumblr mode.")
 
 
 (define-derived-mode jumblr-mode fundamental-mode "jumblr-mode"
