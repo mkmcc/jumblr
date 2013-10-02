@@ -278,7 +278,7 @@ Write data into the file specified by `jumblr-precompute-file'."
           (set-buffer-file-coding-system jlr-save-file-coding-system)
           (insert (format jlr-save-file-header (current-time-string)))
           (insert ";; Do not edit by hand.\n")
-          (insert (jlr-format-dump 'jlr-game-data-list buf))
+          (jlr-format-dump 'jlr-game-data-list buf)
           (insert "\n\n;; Local Variables:\n"
                   (format ";; coding: %s\n" jlr-save-file-coding-system)
                   ";; End:\n")
