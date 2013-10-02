@@ -112,6 +112,15 @@ dict/medium.txt (36k words)
 dict/hard.txt   (47k words)
 dict/expert.txt (85k words)")
 
+(defvar jlr-max-word-length 9
+  "Longest words to consider")
+
+(defvar jlr-min-word-length 5
+  "Shortest words to consider")
+
+(defvar jlr-min-answer-length 3
+  "Shortest answers to consider")
+
 
 
 ;;; faces
@@ -177,7 +186,10 @@ dict/expert.txt (85k words)")
 
 (defun jlr-get-subwords (word)
   "Return a list of all words which can be made from the letters in WORD."
-  (--filter (jlr-subset? it word) jlr-word-list))
+  (--filter (and (<= (length it) (length word))
+                 (>= (length it) jlr-min-answer-length)
+                 (jlr-subset? it word))
+            jlr-word-list))
 
 
 ;;; manage the word list
@@ -406,8 +418,8 @@ if so."
 
 (defun jlr-make-new-game-data ()
   "Compute a new Jumblr game using `jlr-create-game-data'."
-  (let* ((words (--filter (and (>= (length it) 5)
-                               (<= (length it) 9))
+  (let* ((words (--filter (and (>= (length it) jlr-min-word-length)
+                               (<= (length it) jlr-max-word-length))
                           jlr-word-list))
          (n (random (length words)))
          (word (nth n words)))
