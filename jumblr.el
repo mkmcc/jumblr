@@ -318,8 +318,8 @@ subsequent games significantly."
               (cons data jlr-game-data-list))
         ;; this is potentially an expensive calculation, so save work
         ;; periodically in case emacs crashes...
+        (message "computed %d out of %d..." i num)
         (when (= (mod i 10) 0)
-          (message "computed %d out of %d..." i num)
           (jlr-save-list)))))
   (jlr-save-list))
 
