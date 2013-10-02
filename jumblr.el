@@ -112,8 +112,6 @@ dict/medium.txt (36k words)
 dict/hard.txt   (47k words)
 dict/expert.txt (85k words)")
 
-(setq jumblr-dict-file "dict/expert.txt")
-
 
 
 ;;; faces
