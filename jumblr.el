@@ -306,9 +306,8 @@ current guess."
 
 ;; key bindings
 (defvar jumblr-mode-map
-  "Keymap for jumblr mode.")
-(setq jumblr-mode-map
-      (let ((map (make-keymap)))
+  "Keymap for jumblr mode."
+  (let ((map (make-keymap)))
     (suppress-keymap map)
 
     (define-key map (kbd "RET") 'jlr-send-guess)
