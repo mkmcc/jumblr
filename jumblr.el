@@ -465,16 +465,30 @@ if so."
   "Write to BUF a setq statement which reinstates VAR."
   (pp `(setq ,var (quote ,(symbol-value var))) buf))
 
+(defun jlr-rot13-game-data ()
+  "Encrypt or decrypt `jlr-game-data' using rot13."
+  (let ((parta (car jlr-game-data))
+        (partb (cadr jlr-game-data)))
+    (let ((partbnew (--map (list (rot13 (car it)) (cadr it)) partb)))
+      (setq jlr-game-data (list parta partbnew)))))
+
 (defun jumblr-save-game ()
   "Write the state of Jumblr to a file to restore later."
   (interactive)
   (with-temp-file jumblr-save-game-file
+    ;; header
     (insert
      (format ";;; %s -*-emacs-lisp-*-\n" (file-name-nondirectory jumblr-save-game-file))
      (format ";; automatically created by jumblr-save-game on %s.\n"
              (format-time-string "%D %r"))
      ";; do not edit by hand\n")
+
+    ;; encrypt, write, and decrypt the game data
+    (jlr-rot13-game-data)
     (jlr-format-setq 'jlr-game-data (current-buffer))
+    (jlr-rot13-game-data)
+
+    ;; footer
     (insert (format ";;; %s ends here.\n"
                     (file-name-nondirectory jumblr-save-game-file))))
   (message "Jumblr game saved."))
@@ -485,6 +499,7 @@ if so."
   (if (file-readable-p jumblr-save-game-file)
       (progn
         (load-file jumblr-save-game-file)
+        (jlr-rot13-game-data)
         (jlr-draw-game))
     (message "Couldn't read file %s." jumblr-save-game-file)))
 
