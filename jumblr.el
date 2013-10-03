@@ -476,7 +476,8 @@ if so."
      ";; do not edit by hand\n")
     (jlr-format-setq 'jlr-game-data (current-buffer))
     (insert (format ";;; %s ends here.\n"
-                    (file-name-nondirectory jumblr-save-game-file)))))
+                    (file-name-nondirectory jumblr-save-game-file))))
+  (message "Jumblr game saved."))
 
 (defun jumblr-load-game ()
   "Restore the state of Jumblr from a saved file."
