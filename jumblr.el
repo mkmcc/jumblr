@@ -121,6 +121,10 @@ dict/expert.txt (85k words)")
 (defvar jlr-min-answer-length 3
   "Shortest answers to consider")
 
+(defvar jumblr-save-game-file
+  (expand-file-name "jumblr-save.el" user-emacs-directory)
+  "File to store a saved Jumblr game.")
+
 
 
 ;;; faces
@@ -281,6 +285,8 @@ current guess."
 
     (define-key map (kbd "C-c C-q") 'jlr-solve-game)
     (define-key map (kbd "C-c C-r") 'jumblr-new-game)
+    (define-key map (kbd "C-c C-s") 'jumblr-save-game)
+    (define-key map (kbd "C-c C-l") 'jumblr-load-game)
 
     (define-key map (kbd "a") 'jlr-insert-a)
     (define-key map (kbd "b") 'jlr-insert-b)
@@ -388,6 +394,7 @@ jlr-solve-game to show the answer."
        "\n\n" "SPC to shuffle "
        "\n"   "type a guess, RET or SPC to submit "
        "\n"   "C-c C-q to give up, C-c C-r to start a new game"
+       "\n"   "C-c C-s to save, C-c C-l to load a saved game"
        "\n\n" data
        "\n\n" (propertize guess 'face 'jlr-guess-face)))))
 
@@ -450,6 +457,36 @@ if so."
          (newdata (--map (list (car it) (if (cadr it) t -1)) data)))
     (setq jlr-game-data (list (list scr "") newdata)))
   (jlr-draw-game))
+
+
+
+;;; functions to save and load games
+(defun jlr-format-setq (var buf)
+  "Write to BUF a setq statement which reinstates VAR."
+  (pp `(setq ,var (quote ,(symbol-value var))) buf))
+
+(defun jumblr-save-game ()
+  "Write the state of Jumblr to a file to restore later."
+  (interactive)
+  (with-temp-file jumblr-save-game-file
+    (insert
+     (format ";;; %s -*-emacs-lisp-*-\n" (file-name-nondirectory jumblr-save-game-file))
+     (format ";; automatically created by jumblr-save-game on %s.\n"
+             (format-time-string "%D %r"))
+     ";; do not edit by hand\n")
+    (jlr-format-setq 'jlr-game-data (current-buffer))
+    (insert (format ";;; %s ends here.\n"
+                    (file-name-nondirectory jumblr-save-game-file)))))
+
+(defun jumblr-load-game ()
+  "Restore the state of Jumblr from a saved file."
+  (interactive)
+  (if (file-readable-p jumblr-save-game-file)
+      (progn
+        (load-file jumblr-save-game-file)
+        (jlr-draw-game))
+    (message "Couldn't read file %s." jumblr-save-game-file)))
+
 
 (provide 'jumblr)
 
