@@ -353,36 +353,47 @@ jlr-solve-game to show the answer."
                 append element))))
 
 ;; printing and formatting
-(defun jlr-pad-column (str)
-  (s-pad-right jumblr-col-width " " str))
+(defun jlr-prettify-entry (elt)
+  "Format an element of the `jlr-game-data' list for printing.
+ELT has the form (string status). Return a blanked out string if
+status is nil; otherwise, return the string.  Pad it to
+`jumblr-col-width' and properize using either `jlr-cheat-face',
+`jlr-correct-face', or `jlr-blank-face'."
+  (let ((string (car elt))
+        (status (cadr elt)))
+    (let ((output
+           (s-pad-right jumblr-col-width " "
+                        (if status
+                            string
+                          (make-string (length string) ?-)))))
+      (cond
+       ((equal -1 status)
+        (propertize output 'face 'jlr-cheat-face))
+       (status
+        (propertize output 'face 'jlr-correct-face))
+       (t
+        (propertize output 'face 'jlr-blank-face))))))
 
-(defun jlr-prettify (data)
-  (--map (cond ((equal (cadr it) t)
-                (propertize (car it) 'face 'jlr-correct-face))
-               ((equal (cadr it) -1)
-                (propertize (car it) 'face 'jlr-cheat-face))
-               (t
-                (propertize (make-string (length (car it)) ?-) 'face 'jlr-blank-face)))
-         data))
-
-(defun jlr-format-data (data)
-  "print the words in neat columns with fixed width."
-  (let* ((entries (jlr-prettify data))
-         (cols (-partition-all jumblr-col-height (-flatten entries)))
+(defun jlr-format-data ()
+  "Print the words in neat columns with fixed width."
+  (let* ((entries
+          (--map (jlr-prettify-entry it) (cadr jlr-game-data)))
+         (cols
+          (-partition-all jumblr-col-height (-flatten entries)))
          rows)
     (setq rows
           (loop for n to jumblr-col-height
-                collect (mapconcat 'jlr-pad-column
+                collect (mapconcat 'identity
                                    (loop for col in cols
                                          collect (nth n col)) " ")))
     (mapconcat 'identity rows "\n")))
 
 (defun jlr-draw-game ()
-  "print the game data structure for each step in the loop."
+  "Print the game data structure for each step in the loop."
   (let* ((inhibit-read-only t)
          (jlr-scramble-word (caar jlr-game-data))
          (guess (cadr (car jlr-game-data)))
-         (data (jlr-format-data (cadr jlr-game-data)))
+         (data (jlr-format-data))
          (remaining (jlr-difference
                      (string-to-list jlr-scramble-word)
                      (string-to-list guess))))
