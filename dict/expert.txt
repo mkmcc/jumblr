@@ -49,6 +49,7 @@ abbreviates
 abbreviating
 abbreviation
 abbreviations
+abc
 abdicate
 abdicated
 abdicates
@@ -139,6 +140,7 @@ abnormal
 abnormalities
 abnormality
 abnormally
+abo
 aboard
 abode
 abodes
@@ -1224,6 +1226,7 @@ aestivating
 aether
 afar
 afars
+afb
 afeard
 afeared
 affability
@@ -2025,6 +2028,7 @@ alps
 already
 alright
 also
+alt
 altar
 altarpiece
 altarpieces
@@ -2088,6 +2092,7 @@ always
 alyssum
 alyssums
 am
+ama
 amah
 amahs
 amalgam
@@ -2392,9 +2397,9 @@ amusements
 amuses
 amusing
 amusingly
-amyl
 amylase
 an
+ana
 anabolic
 anabolism
 anachronism
@@ -3595,6 +3600,7 @@ areology
 ares
 arete
 aretes
+arf
 argent
 argentina
 argentine
@@ -3796,6 +3802,7 @@ arrows
 arrowy
 arroyo
 arroyos
+ars
 arse
 arsenal
 arsenals
@@ -7955,6 +7962,7 @@ bombshell
 bombshells
 bombsight
 bombsights
+bon
 bonanza
 bonanzas
 bonbon
@@ -8424,6 +8432,7 @@ boysenberries
 boysenberry
 bozo
 bozos
+bps
 br
 bra
 brace
@@ -9918,6 +9927,7 @@ cakewalk
 cakewalked
 cakewalks
 caking
+cal
 calabash
 calabashes
 calaboose
@@ -14064,6 +14074,7 @@ columnists
 columns
 colure
 colures
+com
 coma
 comanche
 comanches
@@ -16714,6 +16725,7 @@ cozily
 coziness
 cozy
 cpi
+cps
 cpu
 cr
 crab
@@ -17468,9 +17480,7 @@ crystallography
 crystalloid
 crystals
 cs
-cst
 ct
-cts
 cub
 cuba
 cubage
@@ -18324,6 +18334,7 @@ david
 davis
 davit
 davits
+daw
 dawdle
 dawdled
 dawdler
@@ -18558,6 +18569,7 @@ debutants
 debuted
 debuting
 debuts
+dec
 decade
 decadence
 decadent
@@ -19946,6 +19958,7 @@ derris
 derrises
 dervish
 dervishes
+des
 desalinate
 desalinated
 desalinates
@@ -22317,6 +22330,7 @@ dolt
 doltish
 doltishly
 dolts
+dom
 domain
 domains
 dome
@@ -22477,6 +22491,7 @@ dorsal
 dorsally
 dorsi
 dory
+dos
 dosage
 dosages
 dose
@@ -25829,6 +25844,7 @@ espy
 espying
 esquire
 esquires
+ess
 essay
 essayed
 essaying
@@ -25841,6 +25857,7 @@ essences
 essential
 essentially
 essentials
+est
 establish
 established
 establisher
@@ -27847,6 +27864,7 @@ felted
 felting
 felts
 feluccas
+fem
 female
 femaleness
 females
@@ -30041,6 +30059,7 @@ foxtrot
 foxy
 foyer
 foyers
+fps
 frabjous
 fracas
 fracases
@@ -30878,6 +30897,7 @@ fuzzily
 fuzziness
 fuzzing
 fuzzy
+fwd
 fylfot
 fylfots
 ga
@@ -31186,6 +31206,7 @@ gappier
 gapping
 gappy
 gaps
+gar
 garage
 garaged
 garages
@@ -31506,6 +31527,7 @@ gemstone
 gemstones
 gemutlich
 gemutlichkeit
+gen
 genal
 gendarme
 gendarmerie
@@ -35016,6 +35038,7 @@ henries
 henry
 henrys
 hens
+hep
 heparin
 hepatic
 hepatica
@@ -35814,6 +35837,7 @@ homosexually
 homosexuals
 homunculi
 homy
+hon
 honan
 honcho
 honchos
@@ -36242,6 +36266,7 @@ hoydens
 hoyle
 hp
 hr
+hrs
 huarache
 huaraches
 hub
@@ -36290,6 +36315,7 @@ hugging
 hugs
 huguenot
 huguenots
+huh
 hula
 hulas
 hulk
@@ -36408,6 +36434,7 @@ humps
 humpy
 hums
 humus
+hun
 hunch
 hunchback
 hunchbacked
@@ -40440,6 +40467,7 @@ janitors
 janizary
 january
 janus
+jap
 japan
 japanese
 japanned
@@ -40753,6 +40781,7 @@ jocundity
 jocundly
 jodhpur
 jodhpurs
+joe
 joes
 joey
 joeys
@@ -41074,6 +41103,7 @@ jurists
 juror
 jurors
 jury
+jus
 just
 justest
 justice
@@ -42957,12 +42987,14 @@ letting
 lettuce
 lettuces
 letup
+leu
 leucocyte
 leukaemia
 leukemia
 leukemic
 leukocyte
 leukoma
+lev
 leva
 levant
 levants
@@ -44194,7 +44226,6 @@ loyalties
 loyalty
 lozenge
 lozenges
-lpm
 lr
 luau
 luaus
@@ -44501,6 +44532,7 @@ lysine
 lysing
 lysins
 ma
+mac
 macabre
 macadam
 macadamize
@@ -44643,6 +44675,7 @@ mafia
 mafias
 mafiosi
 mafioso
+mag
 magazine
 magazines
 magdalen
@@ -44851,6 +44884,7 @@ makeup
 makeweight
 making
 makings
+mal
 malachite
 maladaptation
 maladapted
@@ -45273,6 +45307,7 @@ manuscripts
 manx
 many
 manyfold
+mao
 maoism
 maoist
 maoists
@@ -45529,6 +45564,7 @@ marylander
 marylanders
 marzipan
 marzipans
+mas
 mascara
 mascaras
 mascon
@@ -46082,6 +46118,7 @@ meetings
 meetly
 meetness
 meets
+meg
 megabit
 megabits
 megabuck
@@ -46333,6 +46370,7 @@ mephistopheles
 mephitic
 mephitis
 meprobamate
+mer
 mercantile
 mercantilism
 mercantilistic
@@ -46771,6 +46809,7 @@ microtome
 microwave
 microwaves
 micturate
+mid
 midair
 midas
 midbrain
@@ -46882,6 +46921,7 @@ mike
 mikes
 mikvah
 mikveh
+mil
 miladies
 milady
 milage
@@ -47727,6 +47767,7 @@ mockingbirds
 mockingly
 mocks
 mockup
+mod
 modal
 modalities
 modality
@@ -47810,6 +47851,7 @@ mohair
 mohammed
 mohawk
 mohawks
+moi
 moieties
 moiety
 moil
@@ -47907,6 +47949,7 @@ mommas
 mommies
 mommy
 moms
+mon
 monaco
 monad
 monadic
@@ -48391,6 +48434,7 @@ mossiness
 mossy
 most
 mostly
+mot
 mote
 motel
 motels
@@ -48590,8 +48634,11 @@ moxie
 mozambique
 mozart
 mozzarella
+mpg
+mph
 ms
 msg
+mss
 much
 muchness
 mucilage
@@ -49155,6 +49202,7 @@ naivety
 naked
 nakedly
 nakedness
+nam
 name
 nameable
 named
@@ -49168,6 +49216,7 @@ names
 namesake
 namesakes
 naming
+nan
 nance
 nances
 nancy
@@ -49429,6 +49478,7 @@ neath
 neatly
 neatness
 neats
+neb
 nebbish
 nebbishes
 nebraska
@@ -50139,6 +50189,7 @@ nomogram
 nomograms
 nomograph
 nomography
+non
 nonage
 nonagenarian
 nonagenarians
@@ -51437,6 +51488,7 @@ onyx
 onyxes
 oocyte
 oodles
+ooh
 oohed
 oohing
 oohs
@@ -51470,7 +51522,6 @@ opaqueness
 opaquer
 opaques
 opaquest
-ope
 opec
 open
 openable
@@ -51513,7 +51564,6 @@ operator
 operators
 operetta
 operettas
-opes
 ophidian
 ophidians
 ophthalmic
@@ -51579,6 +51629,7 @@ opprobrium
 opprobriums
 oppugn
 oppugns
+ops
 opt
 optative
 optatives
@@ -52852,6 +52903,7 @@ oxlips
 oxtail
 oxter
 oxters
+oxy
 oxyacetylene
 oxygen
 oxygenate
@@ -52881,6 +52933,7 @@ ozonizes
 ozonizing
 pa
 pablum
+pac
 pace
 paced
 pacemaker
@@ -53311,6 +53364,7 @@ pantywaist
 pantywaists
 panzer
 panzers
+pap
 papa
 papacies
 papacy
@@ -53714,6 +53768,7 @@ parve
 parvenu
 parvenue
 parvenus
+pas
 pasadena
 pascal
 paschal
@@ -55906,6 +55961,7 @@ pivotal
 pivoted
 pivoting
 pivots
+pix
 pixel
 pixels
 pixie
@@ -56537,6 +56593,7 @@ pokily
 pokiness
 poking
 poky
+pol
 poland
 polar
 polarimeter
@@ -57366,6 +57423,7 @@ prayerfulness
 prayers
 praying
 prays
+pre
 preach
 preached
 preacher
@@ -59023,6 +59081,7 @@ psi
 psilocybin
 psoriasis
 psst
+pst
 psych
 psyche
 psyched
@@ -59631,6 +59690,7 @@ pyxis
 qatar
 qed
 qintars
+qua
 quaalude
 quaaludes
 quack
@@ -60308,6 +60368,7 @@ ragweed
 ragweeds
 ragwort
 ragworts
+rah
 raid
 raided
 raider
@@ -61003,6 +61064,7 @@ reawaken
 reawakened
 reawakening
 reawakens
+reb
 rebate
 rebated
 rebates
@@ -61067,6 +61129,7 @@ rebutted
 rebutter
 rebutters
 rebutting
+rec
 recalcitrance
 recalcitrances
 recalcitrant
@@ -61432,7 +61495,6 @@ recruiters
 recruiting
 recruitment
 recruits
-recs
 recta
 rectal
 rectally
@@ -61711,6 +61773,7 @@ reeving
 reexamination
 reexamine
 reexport
+ref
 refashion
 refashioned
 refashioning
@@ -62655,6 +62718,7 @@ reorientations
 reoriented
 reorienting
 reorients
+rep
 repackage
 repackaged
 repackages
@@ -63388,7 +63452,6 @@ retch
 retched
 retches
 retching
-retd
 retention
 retentive
 retentiveness
@@ -64297,6 +64360,7 @@ robuster
 robustest
 robustly
 robustness
+roc
 rochester
 rock
 rocked
@@ -64387,6 +64451,7 @@ rollout
 rollover
 rollovers
 rolls
+rom
 romaine
 romaines
 roman
@@ -64697,7 +64762,7 @@ royally
 royals
 royalties
 royalty
-rte
+rpm
 rub
 rubato
 rubatos
@@ -65167,6 +65232,7 @@ saith
 sake
 sakes
 sakis
+sal
 salaam
 salaamed
 salaaming
@@ -68324,6 +68390,7 @@ shysters
 si
 siam
 siamese
+sib
 siberia
 siberian
 siberians
@@ -68341,6 +68408,7 @@ sibs
 sibyl
 sibylline
 sibyls
+sic
 sicilian
 sicilians
 sicily
@@ -70085,6 +70153,7 @@ sobriety
 sobriquet
 sobriquets
 sobs
+soc
 soccer
 sociability
 sociable
@@ -70199,6 +70268,7 @@ sojourner
 sojourners
 sojourning
 sojourns
+sol
 solace
 solaced
 solaces
@@ -70626,6 +70696,7 @@ sowers
 sowing
 sown
 sows
+sox
 soy
 soya
 soyas
@@ -71648,6 +71719,7 @@ squishiest
 squishing
 squishy
 sr
+sri
 ss
 st
 stab
@@ -73612,6 +73684,7 @@ suggestive
 suggestively
 suggestiveness
 suggests
+sui
 suicidal
 suicidally
 suicide
@@ -74871,6 +74944,7 @@ tags
 tahiti
 tahitian
 tahitians
+tai
 taiga
 tail
 tailbacks
@@ -74980,6 +75054,7 @@ taloned
 talons
 talus
 taluses
+tam
 tamable
 tamale
 tamales
@@ -76276,6 +76351,7 @@ thistledown
 thistles
 thistly
 thither
+tho
 thole
 tholes
 thomas
@@ -78621,6 +78697,7 @@ tsars
 tsetse
 tsetses
 tsimmes
+tsp
 tsuba
 tsunami
 tsunamis
@@ -78915,6 +78992,7 @@ tutti
 tutting
 tutu
 tutus
+tux
 tuxedo
 tuxedoes
 tuxedos
@@ -79256,6 +79334,7 @@ umlaut
 umlauted
 umlauting
 umlauts
+ump
 umpire
 umpired
 umpires
@@ -81257,6 +81336,7 @@ uruguayan
 uruguayans
 urushiol
 us
+usa
 usability
 usable
 usage
@@ -81692,6 +81772,7 @@ veda
 vedanta
 vedantic
 vedic
+vee
 veep
 veeps
 veer
@@ -82321,6 +82402,7 @@ violoncellists
 violoncello
 violoncellos
 viols
+vip
 viper
 viperine
 viperish
@@ -84375,6 +84457,7 @@ witty
 wivern
 wiverns
 wives
+wiz
 wizard
 wizardly
 wizardry
@@ -84549,6 +84632,7 @@ wooziest
 woozily
 wooziness
 woozy
+wop
 wops
 worcester
 word
@@ -84843,6 +84927,7 @@ wryneck
 wrynecks
 wryness
 wurst
+wye
 wyes
 wyoming
 wyomingite
@@ -85038,6 +85123,7 @@ yeoman
 yeomanly
 yeomanry
 yeomen
+yep
 yerba
 yerbas
 yes
@@ -85147,6 +85233,7 @@ yugoslavia
 yugoslavian
 yugoslavians
 yugoslavs
+yuk
 yukon
 yuks
 yule
@@ -85198,7 +85285,9 @@ zebra
 zebras
 zebu
 zebus
+zed
 zeds
+zee
 zees
 zeitgeist
 zen
