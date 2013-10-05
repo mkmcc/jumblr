@@ -99,7 +99,7 @@
 
 ;;; customizable properties
 ;; TODO: add colors?
-(defvar jumblr-col-width 15
+(defvar jumblr-col-width 10
   "Column width for the jumblr game.")
 
 (defvar jumblr-col-height 20
