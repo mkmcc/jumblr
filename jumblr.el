@@ -1,4 +1,4 @@
-;;; jumblr.el -- an anagram game for emacs
+;;; jumblr.el --- an anagram game for emacs
 
 ;; Copyright (C) 2013 Mike McCourt
 ;;
