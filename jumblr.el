@@ -205,7 +205,7 @@ presume the file is properly formatted (lower case, etc.)"
   (let ((word-list '()))
     (when (file-readable-p fname)
       (with-temp-buffer
-        (insert-file-contents (expand-file-name fname jlr-base))
+        (insert-file-contents fname)
         (goto-char (point-min))
         (while (re-search-forward "\\sw+" nil t)
           (setq word-list (cons (match-string 0) word-list)))))
@@ -213,7 +213,10 @@ presume the file is properly formatted (lower case, etc.)"
 
 (defvar jlr-word-list nil)
 (defun jlr-import-wordlist ()
-  (setq jlr-word-list (jlr-slurp-dictionary jumblr-dict-file)))
+  (let ((dict-file-full-path
+         (expand-file-name jumblr-dict-file jlr-base)))
+      (setq jlr-word-list
+            (jlr-slurp-dictionary dict-file-full-path))))
 
 
 
