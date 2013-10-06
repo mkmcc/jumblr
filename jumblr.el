@@ -209,8 +209,9 @@ presume the file is properly formatted (lower case, etc.)"
           (setq word-list (cons (match-string 0) word-list)))))
     word-list))
 
-(defvar jlr-word-list)
-(setq jlr-word-list (jlr-slurp-dictionary jumblr-dict-file))
+(defvar jlr-word-list nil)
+(defun jlr-import-wordlist ()
+  (setq jlr-word-list (jlr-slurp-dictionary jumblr-dict-file)))
 
 
 
@@ -455,6 +456,8 @@ if so."
 (defun jumblr-new-game ()
   "Launch a new jumblr game."
   (interactive)
+  (unless jlr-word-list
+    (jlr-import-wordlist))
   (jlr-make-new-game-data)
   (jlr-draw-game)
   (switch-to-buffer "Jumblr")
