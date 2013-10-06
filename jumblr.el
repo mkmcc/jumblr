@@ -197,13 +197,15 @@ dict/expert.txt (85k words)")
 
 
 ;;; manage the word list
+(defconst jlr-base (file-name-directory load-file-name))
+
 (defun jlr-slurp-dictionary (fname)
   "read a file into a list of words.
 presume the file is properly formatted (lower case, etc.)"
   (let ((word-list '()))
     (when (file-readable-p fname)
       (with-temp-buffer
-        (insert-file-contents fname)
+        (insert-file-contents (expand-file-name fname jlr-base))
         (goto-char (point-min))
         (while (re-search-forward "\\sw+" nil t)
           (setq word-list (cons (match-string 0) word-list)))))
