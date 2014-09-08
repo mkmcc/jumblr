@@ -412,6 +412,7 @@ status is nil; otherwise, return the string.  Pad it to
        "\n"   "type a guess, RET or SPC to submit "
        "\n"   "C-c C-q to give up, C-c C-r to start a new game"
        "\n"   "C-c C-s to save, C-c C-l to load a saved game"
+       "\n"   "M-x jlr-cheat-all for a screensaver"
        "\n\n" data
        "\n\n" (propertize guess 'face 'jlr-guess-face)))))
 
@@ -524,6 +525,74 @@ if so."
         (jlr-rot13-game-data)
         (jlr-draw-game))
     (message "Couldn't read file %s." jumblr-save-game-file)))
+
+
+
+;;; functions for cheating
+
+(defvar jlr-cheat-key-alist
+  '((?a . jlr-insert-a)
+    (?b . jlr-insert-b)
+    (?c . jlr-insert-c)
+    (?d . jlr-insert-d)
+    (?e . jlr-insert-e)
+    (?f . jlr-insert-f)
+    (?g . jlr-insert-g)
+    (?h . jlr-insert-h)
+    (?i . jlr-insert-i)
+    (?j . jlr-insert-j)
+    (?k . jlr-insert-k)
+    (?l . jlr-insert-l)
+    (?m . jlr-insert-m)
+    (?n . jlr-insert-n)
+    (?o . jlr-insert-o)
+    (?p . jlr-insert-p)
+    (?q . jlr-insert-q)
+    (?r . jlr-insert-r)
+    (?s . jlr-insert-s)
+    (?t . jlr-insert-t)
+    (?u . jlr-insert-u)
+    (?v . jlr-insert-v)
+    (?w . jlr-insert-w)
+    (?x . jlr-insert-x)
+    (?y . jlr-insert-y)
+    (?z . jlr-insert-z)))
+
+(defun jlr-type-char (char)
+  "Lisp function to enter a character, as though the user typed it"
+  (funcall (cdr (assoc char jlr-cheat-key-alist)))
+  (sit-for 0.2))
+
+(defun jlr-type-cheat (word)
+  "Lisp function to enter a word, as through the user typed it"
+  (jlr-send-guess)
+  (let ((chars (string-to-list word)))
+    (-map 'jlr-type-char chars)))
+
+(defun jlr-pick (lst)
+  (let* ((n (length lst))
+         (i (random n)))
+    (nth i lst)))
+
+(defun jlr-cheat-once ()
+  "Cheat once."
+  (interactive)
+  (let* ((all-words (cadr jlr-game-data))
+         (ok-words (--filter (not (cadr it)) all-words))
+         (my-word (car (jlr-pick ok-words))))
+    (jlr-type-cheat my-word)
+    (jlr-send-guess)))
+
+(defun jlr-game-won ()
+  "Is the game complete?"
+  (-every? 'cadr (cadr jlr-game-data)))
+
+(defun jlr-cheat-all ()
+  "Auto-play the rest of the game"
+  (interactive)
+  (while (not (jlr-game-won))
+    (jlr-cheat-once)
+    (sit-for 0.5)))
 
 
 (provide 'jumblr)
