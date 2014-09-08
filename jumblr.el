@@ -440,13 +440,16 @@ if so."
     (jlr-try-word (s-chop-suffix "s" word))
     (jlr-draw-game)))
 
-(defun jlr-make-new-game-data ()
-  "Compute a new Jumblr game using `jlr-create-game-data'."
+(defun jlr-random-word ()
   (let* ((words (--filter (and (>= (length it) jlr-min-word-length)
                                (<= (length it) jlr-max-word-length))
                           jlr-word-list))
-         (n (random (length words)))
-         (word (nth n words)))
+         (n (random (length words))))
+    (nth n words)))
+
+(defun jlr-make-new-game-data (&optional the-word)
+  "Compute a new Jumblr game using `jlr-create-game-data'."
+  (let* ((word (or the-word (jlr-random-word))))
     (message "computing a new game...")
     (setq jlr-game-data (jlr-create-game-data word))
     (message "computing a new game...done."))
